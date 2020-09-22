@@ -1,0 +1,31 @@
+# This program will continuously ask the user to guess the number of files in the current directory, until they guess the correct number.
+# The user will be informed if their guess is too high or too low.
+# Once the user guesses the correct number of files in the current directory they should be congratulated.
+
+#!/usr/bin/env bash
+
+function guessinggame {
+files=$(ls -1 | wc -l)
+echo "Files = $files"
+victory=0
+
+while [[ $victory -eq 0 ]]
+do
+    echo "Try to guess the number of files in the current directory. Enter number:"
+    read guess
+    if [[ $guess -eq $files ]]
+    	then
+         	   echo "You won!"
+       	   victory=1
+    	elif [[ $guess -gt $files ]]
+        	   then
+           	   echo "You entered: $guess. This is too big"
+           	   echo ""
+        	else
+          	   echo "You entered: $guess. This is too small"
+          	   echo ""
+    	fi
+done
+}
+
+guessinggame

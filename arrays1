@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# File: arrays1
+
+echo "Start program"
+
+months=(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
+echo "You entered $1 which correspond to"
+echo ${months[$1]}
+
+echo "End program"

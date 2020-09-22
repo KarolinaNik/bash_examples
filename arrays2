@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# File: arrays2
+
+echo "Start program"
+
+months=(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec)
+seasons=(Winter Spring Summer Autumn)
+echo "The lengths of both arrays are:"
+sum = ${#months[*]} + ${#seasons[*]} 
+echo $sum
+
+echo "End program"
